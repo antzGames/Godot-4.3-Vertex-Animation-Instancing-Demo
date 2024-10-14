@@ -1,5 +1,7 @@
-# Godot-VertexAnimation-Demo
-An updated Vertex Animation Instancing Demo Project for Godot Engine v4.3+
+# Godot 4.3: Vertex Animation Instancing Demo
+An updated Vertex Animation Instancing Demo Project for the Godot Engine v4.3+.
+
+Modified from the Godot 3.3 version found here: https://github.com/yanorax/Godot-VertexAnimation-Demo
 
 ## Preview
 ![mage](https://github.com/user-attachments/assets/e1b76d1f-f605-4f31-b8c4-99b317839de4)

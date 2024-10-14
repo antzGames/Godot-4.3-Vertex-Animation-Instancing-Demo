@@ -1,10 +1,10 @@
 [gd_scene load_steps=9 format=3 uid="uid://do7mol8gd1udd"]
 
-[ext_resource type="Script" path="res://scenes/Clappers.gd" id="1_ak0jo"]
-[ext_resource type="Environment" uid="uid://d14u7br4jh788" path="res://default_env.tres" id="2_dlxbk"]
-[ext_resource type="PackedScene" uid="uid://dsjx8j6i756y8" path="res://assets/seats/seats.glb" id="3_sg7ws"]
-[ext_resource type="Material" uid="uid://csgi0ou62n0ma" path="res://materials/mage_shadermaterial.tres" id="4_38vtp"]
-[ext_resource type="ArrayMesh" uid="uid://besvlgxii7mre" path="res://assets/mage/export-mesh.res" id="5_3h3lm"]
+[ext_resource type="Script" path="res://scenes/mage.gd" id="1_rb8ku"]
+[ext_resource type="Environment" uid="uid://d14u7br4jh788" path="res://default_env.tres" id="2_oab1b"]
+[ext_resource type="PackedScene" uid="uid://dsjx8j6i756y8" path="res://assets/seats/seats.glb" id="3_3fuvv"]
+[ext_resource type="Material" uid="uid://csgi0ou62n0ma" path="res://materials/mage_shadermaterial.tres" id="4_i22on"]
+[ext_resource type="ArrayMesh" uid="uid://besvlgxii7mre" path="res://assets/mage/export-mesh.res" id="5_8hdio"]
 
 [sub_resource type="PrismMesh" id="1"]
 left_to_right = 1.0
@@ -16,14 +16,14 @@ size = Vector3(42, 22, 1)
 [sub_resource type="MultiMesh" id="3"]
 transform_format = 1
 instance_count = 1
-mesh = ExtResource("5_3h3lm")
+mesh = ExtResource("5_8hdio")
 buffer = PackedFloat32Array(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0)
 
 [node name="Mage" type="Node3D"]
-script = ExtResource("1_ak0jo")
+script = ExtResource("1_rb8ku")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = ExtResource("2_dlxbk")
+environment = ExtResource("2_oab1b")
 
 [node name="DirectionalLight" type="DirectionalLight3D" parent="WorldEnvironment"]
 transform = Transform3D(0.707107, -0.5, 0.5, 0, 0.707107, 0.707107, -0.707107, -0.5, 0.5, 0, 30, 30)
@@ -67,7 +67,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 18, -18.2)
 
 [node name="Stand" type="Node3D" parent="."]
 
-[node name="seats" parent="Stand" instance=ExtResource("3_sg7ws")]
+[node name="seats" parent="Stand" instance=ExtResource("3_3fuvv")]
 transform = Transform3D(20, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="Left" type="MeshInstance3D" parent="Stand"]
@@ -84,5 +84,5 @@ mesh = SubResource("2")
 
 [node name="MultiMeshInstance" type="MultiMeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
-material_override = ExtResource("4_38vtp")
+material_override = ExtResource("4_i22on")
 multimesh = SubResource("3")

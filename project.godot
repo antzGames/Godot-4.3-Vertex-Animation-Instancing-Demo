@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Godot 4.3: Vertex Animation Instancing Demo"
-run/main_scene="res://scenes/Mage.tscn"
+run/main_scene="res://scenes/mage.tscn"
 config/features=PackedStringArray("4.3")
 config/icon="res://antz_512.png"
 

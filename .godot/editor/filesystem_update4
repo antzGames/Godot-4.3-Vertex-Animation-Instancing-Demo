@@ -4,3 +4,5 @@ res://materials/mage_shadermaterial.tres
 res://scenes/Clappers.tscn
 res://materials/clappers_shadermaterial.tres
 res://assets/characterMedium/export_mesh.mesh
+res://README.md
+res://scenes/mage.tscn

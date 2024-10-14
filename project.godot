@@ -28,6 +28,10 @@ window/vsync/vsync_mode=0
 
 enabled=PackedStringArray("res://addons/debug_menu/plugin.cfg")
 
+[filesystem]
+
+import/blender/enabled=false
+
 [physics]
 
 common/enable_pause_aware_picking=true

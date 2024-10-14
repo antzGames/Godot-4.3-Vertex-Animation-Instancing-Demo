@@ -19,6 +19,10 @@ This project demonstrates how to animate a 3D mesh using vertex data generated b
 	- Animation -> Animation, Shape Keys, Skinning (**disable all**)
 	- Filename -> can rename to anything
 
+![install](https://github.com/user-attachments/assets/f57db7fe-6fbd-4889-96d4-7a500c547441)
+
+![tool](https://github.com/user-attachments/assets/acfe4d8a-b7cb-43f4-82f9-7b4192cdd7fd)
+
 ## Godot Import Guide
 1. You should now have 3 files generated from Blender: **normals.png**, **offsets.exr** and **export_mesh.glb** (whichever filename was chosen, this guide will refer to the default name).
 2. Copy the files into the Godot project folder of your choice. Godot will run the import process as soon as it detects the new files. The import settings for each file still need more changes to ensure all of them work properly with the vertex shader.

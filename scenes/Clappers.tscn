@@ -1,0 +1,87 @@
+[gd_scene load_steps=9 format=3 uid="uid://diapui2n7o572"]
+
+[ext_resource type="PackedScene" uid="uid://dsjx8j6i756y8" path="res://assets/seats/seats.glb" id="1"]
+[ext_resource type="Material" uid="uid://7fxc75uisckc" path="res://materials/clappers_shadermaterial.tres" id="2"]
+[ext_resource type="ArrayMesh" uid="uid://o5yow6bftg7s" path="res://assets/characterMedium/export_mesh.mesh" id="7"]
+[ext_resource type="Script" path="res://scenes/Clappers.gd" id="8"]
+[ext_resource type="Environment" uid="uid://d14u7br4jh788" path="res://default_env.tres" id="9"]
+
+[sub_resource type="PrismMesh" id="1"]
+left_to_right = 1.0
+size = Vector3(22, 22, 1)
+
+[sub_resource type="BoxMesh" id="2"]
+size = Vector3(42, 22, 1)
+
+[sub_resource type="MultiMesh" id="3"]
+transform_format = 1
+instance_count = 1
+mesh = ExtResource("7")
+buffer = PackedFloat32Array(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0)
+
+[node name="Clappers" type="Node3D"]
+script = ExtResource("8")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("9")
+
+[node name="DirectionalLight" type="DirectionalLight3D" parent="WorldEnvironment"]
+transform = Transform3D(0.707107, -0.5, 0.5, 0, 0.707107, 0.707107, -0.707107, -0.5, 0.5, 0, 30, 30)
+shadow_enabled = true
+
+[node name="Camera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 12, 15)
+current = true
+
+[node name="Rows" type="Node3D" parent="."]
+
+[node name="Row1" type="Marker3D" parent="Rows"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 0, 0)
+
+[node name="Row2" type="Marker3D" parent="Rows"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 2, -2.2)
+
+[node name="Row3" type="Marker3D" parent="Rows"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 4, -4.2)
+
+[node name="Row4" type="Marker3D" parent="Rows"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 6, -6.2)
+
+[node name="Row5" type="Marker3D" parent="Rows"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 8, -8.2)
+
+[node name="Row6" type="Marker3D" parent="Rows"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 10, -10.2)
+
+[node name="Row7" type="Marker3D" parent="Rows"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 12, -12.2)
+
+[node name="Row8" type="Marker3D" parent="Rows"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 14, -14.2)
+
+[node name="Row9" type="Marker3D" parent="Rows"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 16, -16.2)
+
+[node name="Row10" type="Marker3D" parent="Rows"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 18, -18.2)
+
+[node name="Stand" type="Node3D" parent="."]
+
+[node name="seats" parent="Stand" instance=ExtResource("1")]
+transform = Transform3D(20, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Left" type="MeshInstance3D" parent="Stand"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 20.5, 11, -9)
+mesh = SubResource("1")
+
+[node name="Right" type="MeshInstance3D" parent="Stand"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -20.5, 11, -9)
+mesh = SubResource("1")
+
+[node name="Back" type="MeshInstance3D" parent="Stand"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11, -20.5)
+mesh = SubResource("2")
+
+[node name="MultiMeshInstance" type="MultiMeshInstance3D" parent="."]
+material_override = ExtResource("2")
+multimesh = SubResource("3")

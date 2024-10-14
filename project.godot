@@ -1,0 +1,39 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Godot 4.3: Vertex Animation Instancing Demo"
+run/main_scene="res://scenes/Mage.tscn"
+config/features=PackedStringArray("4.3")
+config/icon="res://antz_512.png"
+
+[autoload]
+
+DebugMenu="*res://addons/debug_menu/debug_menu.tscn"
+
+[display]
+
+window/size/initial_position_type=3
+window/vsync/vsync_mode=0
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/debug_menu/plugin.cfg")
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+anti_aliasing/quality/msaa_3d=1

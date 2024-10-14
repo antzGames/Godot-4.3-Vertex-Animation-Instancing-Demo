@@ -19,9 +19,9 @@ This project demonstrates how to animate a 3D mesh using vertex data generated b
 	- Animation -> Animation, Shape Keys, Skinning (**disable all**)
 	- Filename -> can rename to anything
 
-![install](https://github.com/user-attachments/assets/f57db7fe-6fbd-4889-96d4-7a500c547441)
+![install](https://github.com/user-attachments/assets/85fd4f4d-177f-48de-bc1c-87c709d924e4)
 
-![tool](https://github.com/user-attachments/assets/acfe4d8a-b7cb-43f4-82f9-7b4192cdd7fd)
+![tool](https://github.com/user-attachments/assets/a8943e6a-e3cc-447c-ad58-bc5898df2b8f)
 
 ## Godot Import Guide
 1. You should now have 3 files generated from Blender: **normals.png**, **offsets.exr** and **export_mesh.glb** (whichever filename was chosen, this guide will refer to the default name).
@@ -48,6 +48,8 @@ This project demonstrates how to animate a 3D mesh using vertex data generated b
 	  - Filter -> (**disable**)
 	  - Mipmaps -> (**disable**)
 10. If you are importing more image files such as albedo textures, refer to [Godot Docs - Importing Images](https://docs.godotengine.org/en/stable/getting_started/workflow/assets/importing_images.html). For palettes and texture masks, recommend using Lossless compression and disable Filter and Mipmaps, so there is no blending of the colours.
+
+![godot](https://github.com/user-attachments/assets/8f4be354-c4bc-485f-8c7f-cb7038e7a670)
 
 ## Assets
 

@@ -1,0 +1,4 @@
+res://assets/mage/export-mesh.res
+res://scenes/mage.tscn
+res://default_env.tres
+res://materials/mage_shadermaterial.tres

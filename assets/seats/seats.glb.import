@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dsjx8j6i756y8"
-path="res://.godot/imported/seats.glb-eb2f6ac3216bdabc7f9ce040c8ec8544.scn"
+valid=false
 
 [deps]
 
 source_file="res://assets/seats/seats.glb"
-dest_files=["res://.godot/imported/seats.glb-eb2f6ac3216bdabc7f9ce040c8ec8544.scn"]
 
 [params]
 

@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bwq4v1a44wh12"
-path="res://.godot/imported/characterMedium.glb-d52e7252c9c334a122a02824f1430ff4.scn"
+valid=false
 
 [deps]
 
 source_file="res://assets/characterMedium/characterMedium.glb"
-dest_files=["res://.godot/imported/characterMedium.glb-d52e7252c9c334a122a02824f1430ff4.scn"]
 
 [params]
 

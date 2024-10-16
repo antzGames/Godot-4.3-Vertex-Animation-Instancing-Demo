@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dve51mmvto8ox"
-path="res://.godot/imported/mage.glb-223abe3c30b3ee64258432435affcb4c.scn"
+valid=false
 
 [deps]
 
 source_file="res://assets/mage/mage.glb"
-dest_files=["res://.godot/imported/mage.glb-223abe3c30b3ee64258432435affcb4c.scn"]
 
 [params]
 

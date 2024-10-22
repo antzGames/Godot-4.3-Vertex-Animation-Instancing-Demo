@@ -40,7 +40,7 @@ void vertex(){
 	float current_frame = start_frame + mod((time * num_frames) + frame_offset, num_frames);
 
 	ivec2 tex_size = textureSize(offset_map, 0);
-	
+
 	float pixel_size = 1.0 / float(tex_size.y);
 	float frame_floor = clamp(floor(current_frame), start_frame+1.0, end_frame);
 	float frame_ceil = clamp(ceil(current_frame), start_frame, end_frame-1.0);
@@ -49,7 +49,7 @@ void vertex(){
 	vec2 frame_ceil_uv_offset = vec2(0.0, -((frame_ceil + 0.5) * pixel_size));
 
 	float lerp_factor = current_frame - frame_floor;
-	
+
 	vec3 offset_floor = texture(offset_map, UV2 + frame_floor_uv_offset).xyz;
 	vec3 offset_ceil = texture(offset_map, UV2 + frame_ceil_uv_offset).xyz;
 	vec3 offset_lerp = mix(offset_floor, offset_ceil, lerp_factor);
@@ -77,7 +77,6 @@ void fragment(){
 	ROUGHNESS = roughness;
 	SPECULAR = specular;
 }
-
 "
 
 [resource]

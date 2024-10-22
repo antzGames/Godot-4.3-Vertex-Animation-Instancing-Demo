@@ -1,3 +1,2 @@
 # Godot-specific ignores
-.godot\
-
+/.godot

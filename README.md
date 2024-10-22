@@ -15,6 +15,7 @@ This project demonstrates how to animate a 3D mesh using vertex data generated b
 - Ability to set a unique animation track per instance.
 - Can assign a unique tint color per instance.
 - A free unused float value for future functionality.
+- Press F3 for debug menu and FPS counter.
 
 ## Limitations
 

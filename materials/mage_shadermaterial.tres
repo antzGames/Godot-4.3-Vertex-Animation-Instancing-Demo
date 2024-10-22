@@ -30,7 +30,7 @@ vec4 EncodeFloatToRGBA( float v ) {
 void vertex(){
 	custom_data = INSTANCE_CUSTOM;
 
-	float start_frame = frames * custom_data.g;
+	float start_frame = frames * custom_data.g; // this is the track number
 	float end_frame = start_frame + frames - 1.0;
 
 	float time_int = 1.0;

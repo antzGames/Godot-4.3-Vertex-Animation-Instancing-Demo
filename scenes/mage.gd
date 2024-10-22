@@ -31,7 +31,7 @@ func _ready():
 			# encode a random RGB color tint.  Note alpha channel not used in shader
 			var tint = getEncodedFloat(Vector4(randf_range(0,1),randf_range(0,1),randf_range(0,1), 1.0))
 			
-			# randomize animation track
+			# randomize animation track either 0 or 1 > current images encode only 2 tracks
 			var track = randi_range(0,3)
 			if track < 3: track = 0 # 75% cheering, 25% cursing you!
 			

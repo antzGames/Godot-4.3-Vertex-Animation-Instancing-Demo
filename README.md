@@ -19,7 +19,7 @@ This project demonstrates how to animate a 3D mesh using vertex data generated b
 
 ## Limitations
 
-- Animations have to be the same number of frames to make the shader simple to use.
+- All animations have to be the same number of frames to make the shader simple to use.
 - Number of animation tracks and number of frames per track have to be known.
 - 3D Models must be less than 8192 vertices.
 - total number of frames for all animations must be less than 8192.

@@ -64,3 +64,6 @@ This project demonstrates how to animate a 3D mesh using vertex data generated b
 [mage](https://kaylousberg.itch.io/kaykit-adventurers) by Kay Lousberg - [CC0 License](http://creativecommons.org/publicdomain/zero/1.0/)
 
 [characterMedium](https://kenney.nl/assets/animated-characters-2) by Kenney - [CC0 License](http://creativecommons.org/publicdomain/zero/1.0/)
+
+![image](https://github.com/user-attachments/assets/16c882fc-6e43-4c92-a366-e2f770b774ae)
+

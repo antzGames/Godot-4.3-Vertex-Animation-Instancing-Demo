@@ -22,6 +22,7 @@ This project demonstrates how to animate a 3D mesh using vertex data generated b
 - Number of animation tracks and number of frames per track have to be known.
 - 3D Models must be less than 8192 vertices.
 - total number of frames for all animations must be less than 8192.
+- you can change animation per instance but no blending or transitions.
 
 ## Blender Add-On Guide
 1. Download the files from [Not Unreal Tools - Vertex Animation](https://github.com/yanorax/unreal_tools) and install **vertex_animation.py** in the Blender -> **Edit** -> **Preferences...** -> **Add-ons** -> **Install...** menu. In the **3D Viewport** side bar, you should now have a **Not Unreal Tools** menu and if selected it will show a **Vertex Animation** panel.

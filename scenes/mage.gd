@@ -26,10 +26,10 @@ func _ready():
 		for _column in range(mm_columns):
 			mm_instance.multimesh.set_instance_transform(mm_index, row_global_transform)
 			row_global_transform.origin.x += 2.0
-			var animation_offset = randf_range(0,1)
+			var animation_offset = randf_range(0,0.25)
 
-			# encode a random RGB color tint.  Note alpha channel not used in shader
-			var tint = getEncodedFloat(Vector4(randf_range(0,1),randf_range(0,1),randf_range(0,1), 1.0))
+			# encode a random color value as a float
+			var tint = randf_range(0,1)
 			
 			# randomize animation track either 0 or 1 > current images encode only 2 tracks
 			var track = randi_range(0,3)
@@ -47,8 +47,6 @@ func _process(delta: float) -> void:
 	camera.position.z = 15 + 3 * sin(timer * 0.125)
 	camera.look_at(look)
 
-func getEncodedFloat(color: Vector4) -> float:
-	return color.dot(Vector4(1.0, 1/255.0, 1/65025.0, 1/16581375.0))
 	
 	
 	

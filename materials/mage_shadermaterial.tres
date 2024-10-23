@@ -22,9 +22,8 @@ uniform float roughness : hint_range(0,1);
 
 varying flat vec4 custom_data;
 
-vec4 EncodeFloatToRGBA( float v ) {
-	float depth = v;
-	return vec4(depth, fract(depth * 255.0), fract(depth * 65025.0), fract(depth * 16581375.0));
+vec4 DecodeFloatToRGBA( float v ) {
+	return vec4(v, fract(v * 255.0), fract(v * 65025.0), fract(v * 16581375.0));
 }
 
 void vertex(){
@@ -69,7 +68,7 @@ void fragment(){
 	vec3 albedo_col = texture(texture_albedo, UV).rgb;
 
 	// tint color variation
-	vec4 tint = EncodeFloatToRGBA(custom_data.a);
+	vec4 tint = DecodeFloatToRGBA(custom_data.r);
 	albedo_col = mix(albedo_col, tint.xyz, 0.25);
 
 	ALBEDO = albedo_col.rgb;

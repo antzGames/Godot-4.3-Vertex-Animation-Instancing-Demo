@@ -1,4 +1,4 @@
-#DEPRICATED!
+# DEPRICATED
 
 I have made a new plugin (with 2 demos) that makes things much easier and now supports any size animations.
 

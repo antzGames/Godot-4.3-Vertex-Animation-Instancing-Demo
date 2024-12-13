@@ -14,7 +14,7 @@ This project will still exists, but will no longer be updated/supported.  Please
 
 --------------------------------------
 
-Original context below.
+Original content below.
 
 --------------------------------------
 

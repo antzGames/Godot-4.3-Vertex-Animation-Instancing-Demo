@@ -1,12 +1,26 @@
-# DEPRICATED
+# PLEASE READ
 
-I have made a new plugin (with 2 demos) that makes things much easier and now supports any size animations.
+I have made this solution into a new plugin (with 2 demos). This new plugin makes things much easier to use and now supports any size animations.
 
-Please see: https://github.com/antzGames/Godot_Vertex_Animation_Textures_Plugin
+Please use the plugin at: https://github.com/antzGames/Godot_Vertex_Animation_Textures_Plugin
 
-Video: https://youtu.be/BIbEaiVOu6k for latest developments.
+This is a video explaining the new plugin: https://youtu.be/BIbEaiVOu6k
 
+This project will still exists, but will no longer be updated/supported.  Please use the plugin described above.
 
+&nbsp;
+
+&nbsp;
+
+--------------------------------------
+
+Original context below.
+
+--------------------------------------
+
+&nbsp;
+
+&nbsp;
 # Godot 4.3: Vertex Animation Instancing Demo
 An updated Vertex Animation Instancing Demo Project for the Godot Engine v4.3+.
 

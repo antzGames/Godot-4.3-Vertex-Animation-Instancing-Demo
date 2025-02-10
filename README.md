@@ -6,7 +6,9 @@ Please use the plugin at: https://github.com/antzGames/Godot_Vertex_Animation_Te
 
 This is a video explaining the new plugin: https://youtu.be/BIbEaiVOu6k
 
-This project will still exists, but will no longer be updated/supported.  Please use the plugin described above.
+This project will still exists, but will no longer be updated/supported.  Also, this project has errors, and the color/tint solution is incorrect.  
+
+Please use the plugin described above.
 
 &nbsp;
 
@@ -98,4 +100,3 @@ This project demonstrates how to animate a 3D mesh using vertex data generated b
 [characterMedium](https://kenney.nl/assets/animated-characters-2) by Kenney - [CC0 License](http://creativecommons.org/publicdomain/zero/1.0/)
 
 ![image](https://github.com/user-attachments/assets/e5a92cc6-6e89-42be-bd4d-09a825608e75)
-

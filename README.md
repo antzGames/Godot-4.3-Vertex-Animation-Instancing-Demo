@@ -38,8 +38,8 @@ This project demonstrates how to animate a 3D mesh using vertex data generated b
 
 - Can support many baked in animations (supports a total of 8192 frames).
 - Ability to set a unique animation track per instance.
-- Can assign a unique tint color per instance.
-- A free unused float value for future functionality.
+- Can assign a unique color per instance.
+- Two (2) free unused float values for future functionality.
 - Press F3 for debug menu and FPS counter.
 
 ## Limitations

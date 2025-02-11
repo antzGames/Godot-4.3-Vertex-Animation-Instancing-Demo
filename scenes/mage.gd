@@ -28,16 +28,17 @@ func _ready():
 			row_global_transform.origin.x += 2.0
 			var animation_offset = randf_range(0,0.25)
 
-			# encode a random color value as a float
-			var tint = randf_range(0,1)
+			# you can use this float for your needs in your shader (like alpha control)
+			var unused_float = randf_range(0,1)
 			
 			# randomize animation track either 0 or 1 > current images encode only 2 tracks
 			var track = randi_range(0,3)
 			if track < 3: track = 0 # 75% cheering, 25% cursing you!
 			
 			# set custom data
-			var custom_data = Color(tint, track as float, 1.0, animation_offset)
+			var custom_data = Color(unused_float, track as float, 1.0, animation_offset)
 			mm_instance.multimesh.set_instance_custom_data(mm_index, custom_data)
+			mm_instance.multimesh.set_instance_color(mm_index, Color(randf(), randf(), randf(), 1.0))
 			mm_index += 1
 
 func _process(delta: float) -> void:

@@ -11,9 +11,8 @@ render_mode blend_mix,depth_draw_opaque,cull_back,diffuse_burley,specular_schlic
 uniform sampler2D offset_map;
 uniform sampler2D normal_map;
 uniform sampler2D texture_albedo;
-//uniform sampler2D texture_palette;
 
-uniform float time_scale = 4.0;
+uniform float fps = 24.0; // change this to what the fps is in Blender
 uniform float frames = 40;
 
 uniform float specular : hint_range(0,1);
@@ -22,27 +21,26 @@ uniform float roughness : hint_range(0,1);
 
 varying flat vec4 custom_data;
 
-vec4 DecodeFloatToRGBA( float v ) {
-	return vec4(v, fract(v * 255.0), fract(v * 65025.0), fract(v * 16581375.0));
-}
-
 void vertex(){
 	custom_data = INSTANCE_CUSTOM;
 
-	float start_frame = frames * custom_data.g; // this is the track number
-	float end_frame = start_frame + frames - 1.0;
-
-	float time_int = 1.0;
-	float time = modf(TIME * time_scale, time_int);
+	float start_frame = frames * custom_data.g + 1.0; // start frame for track one should be 1.0
+	float end_frame = start_frame + frames - 1.0; 
 	float num_frames = end_frame - start_frame;
+	int frame_count = int(end_frame - start_frame);
+
+	// time
+	float time_scale_normalized = fps / num_frames;
+	float time = mod(TIME * time_scale_normalized, 1.0);
+	
 	float frame_offset = num_frames * custom_data.a;
 	float current_frame = start_frame + mod((time * num_frames) + frame_offset, num_frames);
 
 	ivec2 tex_size = textureSize(offset_map, 0);
 
 	float pixel_size = 1.0 / float(tex_size.y);
-	float frame_floor = clamp(floor(current_frame), start_frame+1.0, end_frame);
-	float frame_ceil = clamp(ceil(current_frame), start_frame, end_frame-1.0);
+	float frame_floor = clamp(floor(current_frame), start_frame, end_frame);
+	float frame_ceil = float(int(ceil(current_frame) - start_frame) % frame_count) + start_frame; // accounting for looping
 
 	vec2 frame_floor_uv_offset = vec2(0.0, -((frame_floor + 0.5) * pixel_size));
 	vec2 frame_ceil_uv_offset = vec2(0.0, -((frame_ceil + 0.5) * pixel_size));
@@ -67,11 +65,7 @@ void vertex(){
 void fragment(){
 	vec3 albedo_col = texture(texture_albedo, UV).rgb;
 
-	// tint color variation
-	vec4 tint = DecodeFloatToRGBA(custom_data.r);
-	albedo_col = mix(albedo_col, tint.xyz, 0.25);
-
-	ALBEDO = albedo_col.rgb;
+	ALBEDO = mix(albedo_col.rgb, COLOR.rgb, 0.25); // change mix ratio to you needs.
 	METALLIC = metallic;
 	ROUGHNESS = roughness;
 	SPECULAR = specular;
@@ -81,11 +75,11 @@ void fragment(){
 [resource]
 render_priority = 0
 shader = SubResource("1")
-shader_parameter/time_scale = 0.5
+shader_parameter/fps = 24.0
 shader_parameter/frames = 40.0
-shader_parameter/specular = 0.248
-shader_parameter/metallic = 0.354
-shader_parameter/roughness = 0.54
+shader_parameter/specular = 0.5
+shader_parameter/metallic = 0.5
+shader_parameter/roughness = 0.5
 shader_parameter/offset_map = ExtResource("2_c273e")
 shader_parameter/normal_map = ExtResource("1_amnau")
 shader_parameter/texture_albedo = ExtResource("3_7ts35")

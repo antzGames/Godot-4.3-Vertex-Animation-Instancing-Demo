@@ -6,7 +6,7 @@ Please use the plugin at: https://github.com/antzGames/Godot_Vertex_Animation_Te
 
 This is a video explaining the new plugin: https://youtu.be/BIbEaiVOu6k
 
-This project will still exists, but will no longer be updated/supported.  Also, this project has errors, and the color/tint solution is incorrect.  
+This project will still exists, but will no longer be updated/supported.  
 
 Please use the plugin described above.
 
